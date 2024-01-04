@@ -1,0 +1,199 @@
+:root {
+  --clr-tomato: hsl(4, 100%, 67%);
+  --clr-light-tomato: hsla(4, 100%, 67%, 0.2);
+
+  --clr-dark-slategrey: hsl(234, 29%, 20%);
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-main: "Roboto", sans-serif;
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --br: 0.5em;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-main);
+  display: grid;
+  /*width: 100%;*/
+  min-height: 100vh;
+}
+.container {
+  width: 375px;
+  /*height: 100%;*/
+  place-self: center;
+}
+.content {
+  padding: 1em 2em;
+}
+ul {
+  list-style: none;
+}
+li {
+  display: flex;
+  gap: 1em;
+  margin: 2em 0;
+}
+.content ul li img {
+  align-self: first baseline;
+}
+.hero img {
+  max-width: 100%;
+}
+.hero .logo-d {
+  display: none;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: var(--clr-dark-slategrey);
+}
+button,
+input {
+  padding: 1em;
+  border-radius: var(--br);
+  font-family: inherit;
+  color: var(--clr-white);
+  width: 100%;
+  cursor: pointer;
+}
+/*I put this in so that I can target this in my JS and change all these things when there is an error in the email input*/
+form.error input {
+  /*for ERRORS*/
+  color: var(--clr-tomato); /*this will override the white from above*/
+  border: 1px solid var(--clr-tomato);
+  background-color: var(--clr-light-tomato);
+}
+p {
+  line-height: 1.4;
+}
+button {
+  background-color: var(--clr-charcoal-grey);
+  border: none;
+  margin-top: 1.5em;
+  font-weight: var(--fw-700);
+}
+input {
+  border: 1px solid var(--clr-grey);
+  margin-top: 0.5em;
+}
+.hide {
+  display: none !important;
+}
+.success-message {
+  max-width: 400px;
+  flex-direction: column;
+  padding: 1.5em !important;
+}
+.success-message img {
+  width: 20%;
+  height: 20%;
+  margin-bottom: 2em;
+}
+.success-message button {
+  margin-top: 18em;
+}
+.success-message span {
+  font-weight: var(--fw-700);
+}
+
+form p {
+  font-size: 12px;
+  margin-bottom: 0.5em;
+  font-weight: var(--fw-700);
+}
+
+button:hover {
+  background-color: var(--clr-tomato);
+  transition: all, 1s; /*This was new to me and I love it - at first I thought it was a linear-gradient*/
+}
+.email-error {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  font-weight: var(--fw-700);
+}
+
+.email-error p {
+  color: var(--clr-tomato);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 3em;
+  color: var(--clr-white);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 568px) {
+  body {
+    background-color: var(--clr-dark-slategrey);
+  }
+  .hero img {
+    flex-basis: 50%;
+  }
+  .container {
+    border-radius: var(--br);
+    width: 950px;
+
+    display: flex;
+    padding: 1em;
+    border-radius: 2em;
+    background-color: var(--clr-white);
+  }
+
+  .hero {
+    order: 2;
+  }
+  .hero .logo-d {
+    display: block;
+    border-radius: var(--br);
+  }
+  .hero .logo-m {
+    display: none;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+
+  .content {
+    order: 1;
+    margin: 3em 1em 4em 1em;
+    flex-basis: 50%;
+  }
+
+  .success-message {
+    max-width: 500px;
+    padding: 4em !important;
+    background-color: var(--clr-white);
+    border-radius: 1em;
+  }
+  .success-message img {
+    width: 18%;
+    height: 18%;
+  }
+  .success-message button {
+    display: block;
+    margin-top: 3em;
+  }
+}
+
+/*
+This guy doesn't do the error message when an incorrect email is input
+https://www.youtube.com/watch?v=eJi34zHscXA
+
+
+https://www.youtube.com/watch?v=rSkIx9PL0h8
+*/
