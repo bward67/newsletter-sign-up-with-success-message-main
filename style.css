@@ -63,10 +63,11 @@ input {
   padding: 1em;
   border-radius: var(--br);
   font-family: inherit;
-  color: var(--clr-white);
+
   width: 100%;
   cursor: pointer;
 }
+
 /*I put this in so that I can target this in my JS and change all these things when there is an error in the email input*/
 form.error input {
   /*for ERRORS*/
@@ -82,10 +83,12 @@ button {
   border: none;
   margin-top: 1.5em;
   font-weight: var(--fw-700);
+  color: var(--clr-white);
 }
 input {
   border: 1px solid var(--clr-grey);
   margin-top: 0.5em;
+  color: var(--clr-tomato);
 }
 .hide {
   display: none !important;

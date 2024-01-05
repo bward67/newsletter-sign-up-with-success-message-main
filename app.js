@@ -1,19 +1,19 @@
 /*  Dismiss message*/
 
 const form = document.querySelector("form");
-console.log(form);
+//console.log(form);
 const container = document.querySelector(".container");
-console.log(container);
+//console.log(container);
 const successMsg = document.querySelector(".success-message");
-console.log(successMsg);
+//console.log(successMsg);
 const errorMsg = document.querySelector(".error-message");
-console.log(errorMsg);
+//console.log(errorMsg);
 const dismissMsg = document.querySelector(".dismiss-message");
-console.log(dismissMsg);
+//console.log(dismissMsg);
 const inputBox = document.querySelector("input");
-console.log(inputBox);
+//console.log(inputBox);
 const wrongEmail = document.querySelector(".wrong-email");
-console.log(wrongEmail);
+//console.log(wrongEmail);
 
 form.addEventListener("submit", (e) => {
   e.preventDefault(); /*to stop the page from refreshing*/
